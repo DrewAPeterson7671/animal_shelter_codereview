@@ -19,9 +19,9 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     if @animal.update!(animal_params)
       render status: 200, json: {
-       message: "This quote has been updated successfully."
+       message: "This animal has been updated successfully."
        }
-    end      
+    end
   end
 
   def destroy
