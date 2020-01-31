@@ -8,6 +8,7 @@
 class Seed
 
   def self.begin
+    Animal.destroy_all
     seed = Seed.new
     seed.generate_animals
   end
