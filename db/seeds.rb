@@ -16,17 +16,31 @@ class Seed
     20.times do |i|
       animal = Animal.create!(
         species: Faker::Creature::Animal.name,
+        breed: "NA",
         name: Faker::Creature::Cat.name,
-        comments: Faker::Quotes::Shakespeare.king_richard_iii_quote
+        comment: Faker::Quote.famous_last_words
       )
-      puts "Animal #{i}: A '#{animal.type}'' named '#{animal.name}' who's former owner says '#{animal.comments}'."
+      puts "Animal #{i}: A #{animal.species} named #{animal.name} who's former owner says '#{animal.comment}'."
+    end
+    100.times do |i|
+      animal = Animal.create!(
+        species: "Dog",
+        breed: Faker::Creature::Dog.breed,
+        name: Faker::Creature::Dog.name,
+        comment: Faker::Quote.matz
+      )
+      puts "Animal #{i}: A #{animal.species}, (a #{animal.breed}) named #{animal.name} who's former owner says '#{animal.comment}'."
+    end
+    100.times do |i|
+      animal = Animal.create!(
+        species: "Cat",
+        breed: Faker::Creature::Cat.breed,
+        name: Faker::Creature::Cat.name,
+        comment: Faker::TvShows::GameOfThrones.quote
+      )
+      puts "Animal #{i}: A #{animal.species}, (a #{animal.breed}) named #{animal.name} who's former owner says '#{animal.comment}'."
     end
   end
 end
 
 Seed.begin
-
-
-#
-#
-#
