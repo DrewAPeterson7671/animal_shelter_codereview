@@ -1,0 +1,73 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/animals":
+    post:
+      summary: Creates a animal
+      tags:
+      - Animals
+      consumes:
+      - application/json
+      - application/xml
+      parameters:
+      - name: animal
+        in: body
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            species:
+              type: string
+            breed:
+              type: string
+            comment:
+              type: text
+          required:
+          - name
+          - species
+          - breed
+          - comment
+      responses:
+        '201':
+          description: animal created
+        '422':
+          description: invalid request
+  "/animals/{id}":
+    get:
+      summary: Retrieves a animal
+      tags:
+      - animals
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: name found
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              species:
+                type: string
+              breed:
+                type: string
+              comment:
+                type: text
+            required:
+            - id
+            - name
+            - species
+            - breed
+            - comment
+        '404':
+          description: animal not found
