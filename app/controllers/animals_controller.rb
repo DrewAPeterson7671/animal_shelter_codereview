@@ -24,6 +24,21 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def most_recent
+    @animals = Animal.most_recent
+    json_response(@animals)
+  end
+
+  def cats
+    @animals = Animal.cats
+    json_response(@animals)
+  end
+
+  def dogs
+    @animals = Animal.dogs
+    json_response(@animals)
+  end
+
   def destroy
     @animal = Animal.find(params[:id])
     @animal.destroy
