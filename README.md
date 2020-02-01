@@ -1,24 +1,68 @@
-# README
+# _Animal Shelter API_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _Application to list products and reviews, 1/31/2020_
 
-Things you may want to cover:
+#### By _**Drew Peterson**_
 
-* Ruby version
+## Description
 
-* System dependencies
+_This Animal Shelter API is for finding a list of the animals in the shelter, for reading, posting and modifying._
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* Ensure that you have the correct version of Ruby and Postgres installed
+* Clone the project locally from github.
+* Install Bundler if you do not already have it by running gem install bundler in the terminal.
+* Run bundle install to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
+* SETUP INSTRUCTIONS - from the root directory of this project, run these commands:
+*         rake db:create
+*         rake db:migrate
+*         rake db:test:prepare
+*         rake routes
+*         rails s
 
-* Database initialization
+## Using this API with the Postman application
 
-* How to run the test suite
+* Main endpoint - Open the postman application and type in "localhost:3000/animals", change the method on the left to GET, and click the send SEND to the right.
+* To post a new pet - After the instructions above, change the method to POST from Get, and in the space below, Type in:
+  * In the key space type "name" and in the value space directly to the right, type in the name of the pet.
+  * In the key space type "species" and in the value space directly to the right, type in the species of the pet.
+  * In the key space type "breed" and in the value space directly to the right, type in the breed of the pet.
+  * In the key space type "comment" and in the value space directly to the right, type in a text description of the pet.
+* To modify a post.  
+  * Note the ID field listed.  
+  * Change the method in the upper right from GET to PUT.  
+  * Click on the KEY blank and type the id, click on the VALUE directly to the right of it and type in the ID you noted.
+  * Types in the KEYS of "name", "species", "breed", "comments" and their corresponding values directly to the right of    each of those blanks.  
+  * Any changes will overwrite the old entries and any fields left blank will now be blank.  
+  * Click the SEND button.
+* To delete a post.  
+  * Note the ID field listed.  
+  * Change the method in the upper right from GET to DELETE.  
+  * Click on the KEY blank and type the id, click on the VALUE directly to the right of it and type in the ID you noted.
+  * Click the SEND button.
+* Cats endpoint - Open the postman application and type in "localhost:3000/cats"
+* Dogs endpoint - Open the postman application and type in "localhost:3000/dogs"
+* Most Recent endpoint - Open the postman application and type in "localhost:3000/most_recent"
+* Search endpoint - Open the postman application and type in "localhost:3000/animals", make sure the method on the left is set to GET.  In the key blank below, type "search".  In the value blank directly to the right of that, type in a few letters of the species, breed, or name you are looking for.  Then click the SEND button.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Known Bugs
 
-* ...
+_There are no known bugs at this time._
+
+## Support and contact details
+
+_Please contact me directly via email at drew.a.peterson@hotmail.com with any bug reports, questions, critique, or for any reason._
+
+## Technologies Used
+
+_Ruby 2.6.5, Rails 5.2.4, Postgres SQL, and PG, Pry, Bundler, Sinatra, rspec_
+
+### License
+
+*GPL*
+
+
+
+Copyright (c) 2020 **_Drew Peterson_**
