@@ -6,7 +6,7 @@
 
 ## Description
 
-_This Animal Shelter API is for finding a list of the animals in the shelter, for reading, posting and modifying._
+_This Animal Shelter API is for finding a list of the animals in the shelter, for reading, posting and modifying. This project was a code review exam for Epicodus Boot Camp.  8 hours were allowed to construct it from scratch._
 
 ## Setup/Installation Requirements
 
