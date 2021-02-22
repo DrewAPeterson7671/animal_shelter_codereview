@@ -10,20 +10,19 @@ _This Animal Shelter API is for finding a list of the animals in the shelter, fo
 
 ## Setup/Installation Requirements
 
-* Ensure that you have the correct version of Ruby and Postgres installed
+* Requires Ruby 2.6.5, Rails 5.2.4, Bundler, PostgreSQL and Postman (for interaction).
 * Clone the project locally from github.
-* Install Bundler if you do not already have it by running gem install bundler in the terminal.
-* Run bundle install to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
-* SETUP INSTRUCTIONS - from the root directory of this project, run these commands:
-*         rake db:create
-*         rake db:migrate
-*         rake db:test:prepare
-*         rake routes
-*         rails s
+* From the terminal, run the following commands:
+  *   run bundle install
+  *   rake db:create
+  *   rake db:migrate
+  *   rake db:test:prepare (To review testing)
+  *   rake db:seed
+  *   rails s
 
 ## Using this API with the Postman application
 
-* Main endpoint - Open the postman application and type in "localhost:3000/animals", change the method on the left to GET, and click the send SEND to the right.
+* Main endpoint - Open the postman application and type in "localhost:3000/animals", change the method on the left to GET, and click SEND to the right.
 * To post a new pet - After the instructions above, change the method to POST from Get, and in the space below, Type in:
   * In the key space type "name" and in the value space directly to the right, type in the name of the pet.
   * In the key space type "species" and in the value space directly to the right, type in the species of the pet.
@@ -57,7 +56,7 @@ _Please contact me directly via email at drew.a.peterson@hotmail.com with any bu
 
 ## Technologies Used
 
-_Ruby 2.6.5, Rails 5.2.4, Postgres SQL, and PG, Pry, Bundler, Sinatra, rspec_
+_Ruby 2.6.5, Rails 5.2.4, Postgres SQL, and Pry, Bundler, Sinatra, rspec_
 
 ### License
 
