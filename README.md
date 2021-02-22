@@ -7,7 +7,7 @@
 ## Description
 
 _This Animal Shelter API is for finding a list of the animals in the shelter, for reading, posting and modifying. This project was a code review exam for Epicodus Boot Camp.  8 hours were allowed to construct it from scratch._
-_Posted on Heroku at https://animal-shelter-api-codereview.herokuapp.com/_
+_Posted on Heroku at https://animal-shelter-api-codereview.herokuapp.com/animals_
 _Use Postman instructions, below, to substituting "localhost:3000/animals" with the Heroku URL above to interesct with the live API_
 
 ## Setup/Installation Requirements
